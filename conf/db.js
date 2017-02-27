@@ -3,7 +3,7 @@ module.exports = {
     mysql: {
         host: '10.8.100.2',
         user: 'kuaibao',
-        password: 'kuaibao@2015',
+        password: '',
         database:'kuaibao', // 前面建的myclass表位于这个数据库中
         port: 3306
     }

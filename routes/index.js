@@ -36,7 +36,7 @@ router.route("/").get(function(req,res){
 
     connection.connect();
 
-    var strChannelList = "select a.title,b.channel_id from object_detail a, channel_object_rel b where a.id = b.object_id and channel_id='"+ uid +"' limit 0,10";
+    var strChannelList = "select a.id,a.title,a.type,a.author,a.created_at,a.src_url,b.channel_id from object_detail a, channel_object_rel b where a.id = b.object_id and channel_id='"+ uid +"' limit 0,10";
     //console.log(strChannelList);
     connection.query(strChannelList, function(err, result) {
         if (err) throw err;
